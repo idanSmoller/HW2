@@ -1,7 +1,7 @@
 import java.lang.Math;
 
 public abstract class Function {
-    private static double TAYLORX0 = 0;
+    private static final double TAYLOR_X0 = 0;
 
     @Override
     public abstract String toString();
@@ -91,7 +91,7 @@ public abstract class Function {
     }
 
     /**
-     * calculate taylor polynomial from order n, near Function.TAYLORX0 and returns it
+     * calculate taylor polynomial from order n, near Function.TAYLOR_X0 and returns it
      * @param n the order of the polynomial
      * @return The taylor polynomial
      */
@@ -99,7 +99,7 @@ public abstract class Function {
         double[] coefficients = new double[n];
         Function currDerivative = this;
         for(int i = 0; i <= n; i++) {
-            coefficients[i] = currDerivative.valueAt(Function.TAYLORX0) / Function.factorial(n);
+            coefficients[i] = currDerivative.valueAt(Function.TAYLOR_X0) / Function.factorial(n);
         }
         // TODO: make sure the build function works this way
         return new Polynomial(coefficients);
