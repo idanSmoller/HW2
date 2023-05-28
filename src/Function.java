@@ -31,8 +31,6 @@ public abstract class Function {
                 left = mid;
             }
             else{
-                // TODO: to ask if need to deal with case mid == 0, because it isn't written but the algorithm isn't
-                //  working in some cases if not handles
                 right = mid;
             }
         }
