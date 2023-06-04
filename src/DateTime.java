@@ -9,6 +9,14 @@ public class DateTime extends Date{
         this.minute = ((0 <= minute && minute <= 59) ? minute : 0);
     }
 
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
     // TODO: check if the documentation should be before @Override or after
     /**
      * calculate and return hash code per instance, and return the same integer for 2 instances

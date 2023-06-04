@@ -9,6 +9,18 @@ public class Date {
         this.day = ((1 <= day && day <= 31) ? day : 1);
     }
 
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     /**
      * calculate and return hash code per instance, and return the same integer for 2 instances
      * if and only if all their attributes are the same
@@ -26,7 +38,10 @@ public class Date {
      */
     @Override
     public boolean equals(Object other) {
-        // TODO: understand how to undestand type is Date without saying "DateTime"
+        if (other instanceof Date) {
+            return this.toString().equals(other.toString());
+        }
+        return false;
     }
 
     /**

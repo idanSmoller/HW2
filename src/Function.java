@@ -4,6 +4,7 @@ public abstract class Function {
     private static final double TAYLOR_X0 = 0;
 
     @Override
+    //TODO: add documentation in this class
     public abstract String toString();
 
     public abstract double valueAt(double x);
